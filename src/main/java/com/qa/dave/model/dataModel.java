@@ -29,7 +29,8 @@ public class dataModel implements Serializable{
 	@NotBlank
 	@Column(name = "category")
 	private String category;
-	
+	private String description;
+
 	@Column(name = "price")
 	private double price;
 
@@ -57,6 +58,14 @@ public class dataModel implements Serializable{
 		this.category = category;
 	}
 
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	
 	public double getPrice() {
 		return price;
 	}
