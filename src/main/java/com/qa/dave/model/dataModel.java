@@ -20,7 +20,7 @@ public class dataModel implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "FID")
-	private Long FID;
+	private Long fid;
 	
 	@NotBlank
 	@Column(name = "title")
@@ -29,17 +29,19 @@ public class dataModel implements Serializable{
 	@NotBlank
 	@Column(name = "category")
 	private String category;
+	
+	@Column
 	private String description;
 
 	@Column(name = "price")
-	private double price;
+	private Double price;
 
-	public Long getFID() {
-		return FID;
+	public Long getfid() {
+		return fid;
 	}
 
-	public void setFID(Long fID) {
-		FID = fID;
+	public void setfid(Long fid) {
+		fid = fid;
 	}
 
 	public String getTitle() {
@@ -70,7 +72,7 @@ public class dataModel implements Serializable{
 		return price;
 	}
 
-	public void setPrice(Integer price) {
+	public void setPrice(Double price) {
 		this.price = price;
 	}
 
